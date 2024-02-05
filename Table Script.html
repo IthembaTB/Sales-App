@@ -1,0 +1,51 @@
+"<script src=""https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js""></script>
+
+<link rel=""stylesheet"" href=""https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"" integrity=""sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"" crossorigin=""anonymous"">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+</style>
+
+
+<table class=""table table-striped"">
+    <tr  class=""bg-info"">
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Disc %</th>
+        <th>VAT %</th>
+        <th>Exclusive Total</th>
+        <th>Inclusive Total</th>
+    </tr>
+
+    <tbody id=""myTable"">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray = {'description': DIGITAL PRINTED TARPS , quantity':1 , 'disc':0.00% , 'vat':15.00% , 'exclusive total':R 19,008.00 ,'inclusive total':R 21,859.20}, {'description': DRUM RAIL 180MM , quantity':1 , 'disc':0.00% , 'vat':15.00% , 'exclusive total':R 6,120.00 ,'inclusive total':R 7,038.00}, {'description': FUEL SAVER FAIRING , quantity':1 , 'disc':100.00% , 'vat':15.00% , 'exclusive total':R 0.00 ,'inclusive total':R 0.00}, {'description': FUEL TANK & BRAIDED HOSE 300L , quantity':1 , 'disc':0.00% , 'vat':15.00% , 'exclusive total':R 13,450.00 ,'inclusive total':R 15,467.50}, {'description': LOCKABLE BATTERY COVER , quantity':1 , 'disc':0.00% , 'vat':15.00% , 'exclusive total':R 1,500.00 ,'inclusive total':R 1,725.00}
+	
+	buildTable(myArray)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].description}</td>
+							<td>${data[i].quantity}</td>
+							<td>${data[i].disc}</td>
+							<td>${data[i].vat}</td>
+							<td>${data[i].exclusive total}</td>
+							<td>${data[i].inclusive total}</td>
+					  </tr>`
+
+			table.innerHTML += row
+		}
+	}
+
+</script>"
